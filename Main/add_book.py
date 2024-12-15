@@ -13,7 +13,7 @@ def addBook(file_name):
     book["title"] = input("    Title         : ")
     book["author"] = input("    Author : ")
     book["price"] = input("    price : ")
-    book["quantity"] = input("    Quantity : ")
+    book["quantity"] = int(input("    Quantity : "))
     book["year"] = input("    Publishing year : ")
     
     
@@ -29,9 +29,7 @@ def addBook(file_name):
 
     print("    \nBook added successfully.")
     
-    if my_tools.menuOrExit() == 2:
-        exit()
-
+    
 
 
 

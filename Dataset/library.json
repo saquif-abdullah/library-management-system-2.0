@@ -3,7 +3,7 @@
         "title": "c++",
         "author": "saquif",
         "price": "120$",
-        "quantity": "10000",
+        "quantity": 10000,
         "year": "2025",
         "isbn": 297752,
         "time": "13-12-24 22:16:05"
@@ -12,7 +12,7 @@
         "title": "Python",
         "author": "Saquif",
         "price": "150$",
-        "quantity": "12341",
+        "quantity": 12341,
         "year": "2026",
         "isbn": 802805,
         "time": "13-12-24 22:17:55"
@@ -21,9 +21,36 @@
         "title": "Algorithm",
         "author": "Saquif",
         "price": "130$",
-        "quantity": "4563212",
+        "quantity": 4563212,
         "year": "2027",
         "isbn": 602416,
         "time": "13-12-24 22:20:10"
+    },
+    {
+        "title": "Explain with physics",
+        "author": "Saquif_Sohol",
+        "price": "14",
+        "quantity": 2314,
+        "year": "2314123",
+        "isbn": 705883,
+        "time": "14-12-24 12:40:11"
+    },
+    {
+        "title": "tt",
+        "author": "aa",
+        "price": "pp",
+        "quantity": 0,
+        "year": "245",
+        "isbn": 989525,
+        "time": "14-12-24 12:42:18"
+    },
+    {
+        "title": "C++",
+        "author": "saquif",
+        "price": "$21",
+        "quantity": 5,
+        "year": "2010",
+        "isbn": 829112,
+        "time": "15-12-24 20:56:42"
     }
 ]

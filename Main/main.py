@@ -7,19 +7,22 @@ import view_books
 import search_book
 import edit_book
 import delete_book
+import lend_book
 
 class LibraryManagementSystem:
 
     def __init__(self):
         
         self.file_name = "../Dataset/library.json"
+        self.lender_file = "../Dataset/lend_books.json"
         self.menu = {
             1: "Add Book",
             2: "View All Books",
             3: "Search Book",
             4: "Edit Book",
             5: "Delete Book",
-            6: "Exit"
+            6: "Lend Book",
+            7: "Exit"
         }
         
     
@@ -44,6 +47,9 @@ class LibraryManagementSystem:
     
     def deleteBook(self):
         delete_book.deleteBook(self.file_name)
+    
+    def lendBook(self):
+        lend_book.lendBook(self.file_name, self.lender_file)
     
     def exitProgram():
         exit()
@@ -71,6 +77,7 @@ def main():
         3: ob.searchBook,
         4: ob.editBook,
         5: ob.deleteBook,
+        6: ob.lendBook,
     }
 
     
@@ -79,22 +86,26 @@ def main():
         try:
             key = int(input("    Choose an option : "))
             
-            if not(key>=1 and key<=6):
+            if not(key>=1 and key<=7):
                 print("\n\n    Invalid Input.")
                 key = ob.menuOrExit()
-                print(key)
+                # print(key)
                 if key == 1:
                     continue
                 else:
                     exit()
 
-            elif key == 6:
+            elif key == 7:
                 exit()
             elif key in ob.menu_function_map:
                 ob.menu_function_map[key]()
            
         except ValueError:
             print("\n\n    Value Error")
+        
+
+        if ob.menuOrExit() == 2:
+            exit()
     
 
 

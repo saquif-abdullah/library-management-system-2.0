@@ -9,12 +9,11 @@ def viewBooks(file_name):
 
     books = read_books.readBooks(file_name)
     for i in range(len(books)):
-        print(f"\n    {i+1}.")
+        print(f"\n    ID : {i}.")
         book = books[i]
         for key, value in book.items():
             print(f"      {key}     : {value}")
     
-    if(my_tools.menuOrExit() == 2):
-        exit()
+  
     
 

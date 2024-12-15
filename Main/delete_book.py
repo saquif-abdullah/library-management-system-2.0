@@ -1,3 +1,12 @@
 
+import my_tools
+
 def deleteBook(file):
-    print("Delete")
+    my_tools.Clear()
+    print("\n\n\n_____________Delete Book__________\n\n")
+
+    input()
+    
+
+
+    
