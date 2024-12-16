@@ -44,8 +44,8 @@ def lendBook(file_name, lender_file):
 
 
     def update_books():
-        for book in books:
-            book["quantity"] -= 1
+        for i in availavle:
+            books[i]["quantity"] -= 1
             write_books.writeBooks(file_name, books)
 
     def process():

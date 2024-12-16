@@ -8,6 +8,8 @@ import search_book
 import edit_book
 import delete_book
 import lend_book
+import view_lended_books
+import return_lended_book
 
 class LibraryManagementSystem:
 
@@ -22,7 +24,9 @@ class LibraryManagementSystem:
             4: "Edit Book",
             5: "Delete Book",
             6: "Lend Book",
-            7: "Exit"
+            7: "View Lended Books",
+            8: "Return Lended Book",
+            9: "Exit"
         }
         
     
@@ -51,6 +55,12 @@ class LibraryManagementSystem:
     def lendBook(self):
         lend_book.lendBook(self.file_name, self.lender_file)
     
+    def viewLendedBooks(self):
+        view_lended_books.viewLendedBooks(self.file_name, self.lender_file)
+    
+    def returnLendedBook(self):
+        return_lended_book.returnLendedBook(self.file_name, self.lender_file)
+    
     def exitProgram():
         exit()
     
@@ -78,6 +88,8 @@ def main():
         4: ob.editBook,
         5: ob.deleteBook,
         6: ob.lendBook,
+        7: ob.viewLendedBooks,
+        8: ob.returnLendedBook,
     }
 
     
@@ -86,7 +98,7 @@ def main():
         try:
             key = int(input("    Choose an option : "))
             
-            if not(key>=1 and key<=7):
+            if not(key>=1 and key<=9):
                 print("\n\n    Invalid Input.")
                 key = ob.menuOrExit()
                 # print(key)
@@ -95,7 +107,7 @@ def main():
                 else:
                     exit()
 
-            elif key == 7:
+            elif key == 9:
                 exit()
             elif key in ob.menu_function_map:
                 ob.menu_function_map[key]()
