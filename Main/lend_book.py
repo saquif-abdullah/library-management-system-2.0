@@ -33,6 +33,7 @@ def lendBook(file_name, lender_file):
     availavle = []
     unavailable = []
     books = read_books.readBooks(file_name)
+    
 
     for id in ids:
         availavle.append(id) if books[id]["quantity"] > 0 else unavailable.append(id)
@@ -42,10 +43,33 @@ def lendBook(file_name, lender_file):
     yn = int(input("\n    Enter 1 if you want to borrow the available books : "))
 
 
+    def update_books():
+        for book in books:
+            book["quantity"] -= 1
+            write_books.writeBooks(file_name, books)
+
     def process():
         lend_books = read_lend_book.readLendBook(lender_file)
-        print(lend_books)
-        # lend_books[borrower_name] = {"ids": ids}
+        
+        if borrower_name in lend_books:
+            for id in availavle:
+                id = str(id)
+                if id in lend_books[borrower_name]:
+                    lend_books[borrower_name][id] += 1
+                else:
+                    lend_books[borrower_name][id] = 1
+        
+        else:
+            lend_books[borrower_name] = {}
+            for id in availavle:
+                id = str(id)
+                if id in lend_books[borrower_name]:
+                    lend_books[borrower_name][id] += 1
+                else:
+                    lend_books[borrower_name][id] = 1
+        
+        write_lend_book.writeLendBook(lender_file, lend_books)
+        update_books()
 
 
     if yn == 1:
