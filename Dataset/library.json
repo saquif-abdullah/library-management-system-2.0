@@ -46,10 +46,10 @@
     },
     {
         "title": "C++",
-        "author": "saquif",
-        "price": "$21",
-        "quantity": 4,
-        "year": "2010",
+        "author": "Saquif",
+        "price": "120$",
+        "quantity": "5",
+        "year": "2025",
         "isbn": 829112,
         "time": "15-12-24 20:56:42"
     }
