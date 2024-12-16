@@ -84,7 +84,7 @@ def main():
     ob.menu_function_map = {
         1: ob.addBook,
         2: ob.viewBooks,
-        3: ob.searchBook,
+        3: ob.searchBook,   
         4: ob.editBook,
         5: ob.deleteBook,
         6: ob.lendBook,
